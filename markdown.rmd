@@ -1,0 +1,31 @@
+---
+output: html_document
+---
+# How faithful is Old FaithFul?
+
+
+![Old Faithful in action](https://raw.githubusercontent.com/SqlWaldorf/urbidata/samplefiles/OldFaithful.jpg)
+
+## Data
+
+Let's look at some of the data:
+
+```{r}
+head(faithful)
+summary(faithful)
+cor(faithful)
+```
+
+> todo: add references to data source
+
+## Plots
+
+Numbers are nice, but plots are **better**!
+
+```{r, echo=FALSE}
+linm <- lm(faithful$eruptions ~ faithful$waiting)
+plot(faithful$waiting, faithful$eruptions)
+abline(linm)
+```
+
+
